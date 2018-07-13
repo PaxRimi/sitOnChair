@@ -1,0 +1,103 @@
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: normal;
+    vertical-align: baseline;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    padding: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.container {
+    width: 1060px;
+    margin: 0 auto;
+}
+
+.containerFlex {
+    display: flex;
+    justify-content: space-between;
+}
+
+.container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.toUpper {
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.container li > ul {
+    text-transform: none;
+}
+
+.blueText {
+    color: #0f6655;
+    font-weight: 900;
+}
+
+nav > ul {
+    display: flex;
+    list-style-type: none;
+}
+
+nav > ul li:not(:last-child) {
+    padding-right: 20px;
+}
+
+li.toUpper{
+    position: relative;
+}
+
+.dropDown {
+    width: 120px;
+    position: absolute;
+    padding-top: 25px;
+    list-style-type: none;
+    margin-left: calc(50% - 70px);
+    display: none;
+}
+
+.dropDown li {
+    background-color: black;
+    padding: 5px 10px;
+}
+
+.dropDown li:first-child {
+    padding-top: 15px;
+    position: relative;
+}
+
+.dropDown li:first-child:before {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 17px solid #000;
+    position: absolute;
+    top: -15px;
+    left: 35px;
+}
+
+.dropDown li:last-child {
+    padding-bottom: 15px;
+}
+
+li.toUpper:hover .dropDown{
+    display: block;
+}
+
+li.toUpper:hover {
+    cursor: pointer;
+}
