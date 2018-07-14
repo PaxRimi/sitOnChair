@@ -1,4 +1,4 @@
-html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
+html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, figure, footer, header, menu, nav, section, time, mark, audio, video, details, summary {
     margin: 0;
     padding: 0;
     border: 0;
@@ -6,12 +6,18 @@ html, body, body div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquot
     font-weight: normal;
     vertical-align: baseline;
     background: transparent;
+}
+
+*{
     box-sizing: border-box;
 }
 
 body{
     font-family: Arial, sans-serif;
 }
+
+/* Header strony */
+
 
 header {
     width: 100%;
@@ -38,7 +44,7 @@ header {
 
 .toUpper {
     text-transform: uppercase;
-    font-weight: 500;
+    font-weight: bold;
 }
 
 .container li > ul {
@@ -107,6 +113,8 @@ li.toUpper:hover {
     cursor: pointer;
 }
 
+/* First Section with black chair */
+
 main {
     width: 100%;
     height: 505px;
@@ -153,3 +161,278 @@ h1 {
     font-size: 25px;
 }
 
+/* Second Section with two image and text  */
+
+.gallery {
+    padding: 15px 0;
+    height: 350px;
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.galleryImg:first-of-type {
+    background-image: url("../images/box1_img.jpg");
+}
+
+.galleryImg:nth-of-type(2) {
+    background-image: url("../images/box2_img.jpg");
+}
+
+.galleryImg{
+    width: calc(33% - 15px);
+    height: 226px;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.galleryText {
+    width: calc(33% - 15px);
+    height: 230px;
+    border: 1px solid grey;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.galleryText h2 {
+    font-weight: bold;
+    position: relative;
+}
+
+.galleryText p {
+    color: #bdbdbd;
+}
+
+.galleryImg h2 {
+     font-weight: bold;
+     margin-top: 150px;
+     width: 100%;
+     padding: 15px;
+     height: 60px;
+     background: rgba(230, 225, 223, 0.3);
+    position: relative;
+ }
+
+.galleryImg h2:after {
+    content: "";
+    width: 150px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    background-color: #26c7a9;
+}
+
+.galleryText h2:after {
+    content: "";
+    width: 150px;
+    height: 7px;
+    display: block;
+    position: absolute;
+    background-color: #26c7a9;
+}
+/* Sekcja z Cennikami */
+.priceList {
+    background-color: #f0f0f0;
+    width: 100%;
+    height: 730px;
+    padding-top: 50px;
+}
+
+/* Nagłówek sekcji z Cennikami */
+.priceList h2 {
+    font-size: 18px;
+    color: #575757;
+    text-transform: uppercase;
+}
+
+.priceList h2:after {
+    content: "";
+    height: 10px;
+    width: 321px;
+    display: block;
+    background-color: #26c7a9;
+}
+
+/* Cennik 3 boxy*/
+
+.priceBox {
+    width: 330px;
+    height: 500px;
+    border: 2px solid #c2c2c2;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #c2c2c2;
+    background-color: #f7f7f7;
+    margin-top: 110px;
+}
+
+.priceBox h3 {
+    color: #26c7a9;
+    font-weight: normal;
+    margin: 30px 0;
+    font-size: 20px;
+}
+
+/* Style do kóła z ceną */
+
+.circlePrice {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 2px solid #c2c2c2;
+    font-size: 38px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.circlePrice p{
+    position: relative;
+}
+
+.circlePrice sup{
+    font-size: 13px;
+    position: absolute;
+    top: 0px;
+    right: -15px;
+}
+
+.circlePrice p + p {
+    font-size: 13px;
+}
+
+/* Style do tekstów pod kółkiem*/
+
+.priceBox > p {
+    width: 100%;
+    height: 45px;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.priceBox > p:nth-of-type(2n + 1) {
+    background-color: #e3e3e3;
+}
+
+.priceBox > p:nth-of-type(2n + 2) {
+    background-color: #f0f0f0;
+}
+
+/* Style do przycisku dołącz wewnątrz boxa */
+
+.priceBox a {
+    width: 125px;
+    height: 35px;
+    color: #fff;
+    background-color: #26c7a9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    position: absolute;
+    bottom: 18px;
+}
+
+/* Style do kółeczka nad cenami */
+
+.priceBox:before {
+    content: "";
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background-color: #c2c2c2;
+    position: absolute;
+    top: -40px;
+    box-shadow: inset 0 0 0 14px #fff;
+    border: 2px solid #c2c2c2;
+}
+
+/*Stylujemy Aktywnego boxa*/
+
+.priceBoxActive {
+    background-color: #26c7a9;
+    border: 2px solid #26c7a9;
+}
+
+.priceBoxActive h3 {
+    color: #fff;
+}
+
+.priceBoxActive .circlePrice {
+    color: #26c7a9;
+    border: 2px solid #26c7a9;
+}
+
+.priceBoxActive > p:nth-of-type(2n + 1) {
+    background-color: #fff;
+}
+
+.priceBoxActive > p:nth-of-type(2n + 2) {
+    background-color: #f0f0f0;
+}
+
+.priceBoxActive a {
+    background-color: #fff;
+    color: #26c7a9;
+}
+
+.priceBoxActive:before {
+    background-color: #fff;
+    box-shadow: inset 0 0 0 14px #26c7a9;
+    border: 2px solid #26c7a9;
+}
+
+/* Style do sekcji kontaktowej*/
+
+.contactform {
+    width: 100%;
+    height: 560px;
+    background-color: #fff;
+}
+
+/* Style do części z inputami tekstiowymi */
+
+.contactform__text {
+    display: flex;
+    flex-direction: column;
+    margin-top: 97px;
+}
+
+.contactform__text input, .contactform__text textarea {
+    width: 630px;
+    border-top: 1px solid #26c7a9;
+    border-right: 1px solid #26c7a9;
+    border-bottom: 1px solid #26c7a9;
+    border-left: none;
+    margin-bottom: 26px;
+    font-size: 27px;
+    padding: 5px;
+    position: relative;
+}
+
+.contactform__text input {
+    height: 66px;
+}
+
+.contactform__text textarea {
+    height: 188px;
+    resize: none;
+}
+
+/* Style do placeholdera */
+
+::placeholder{
+    font-size: 27px;
+    color: #cfcfcf;
+    position: absolute;
+    top: 10px;
+    font-weight: lighter;
+}
