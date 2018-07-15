@@ -21,6 +21,7 @@ body{
 
 header {
     width: 100%;
+    height: 40px;
     padding: 10px;
     background: #000;
     color: #fff;
@@ -79,8 +80,12 @@ li.toUpper{
 }
 
 .dropDown li {
+    width: 120px;
     background-color: black;
     padding: 5px 10px;
+    height: 40px;
+    display: flex;
+    align-items: center;
 }
 
 .dropDown li:first-child {
@@ -396,25 +401,49 @@ h1 {
     width: 100%;
     height: 560px;
     background-color: #fff;
+    padding-top: 35px;
 }
 
+/* Nagłówek Kontakt */
+
+
+.contactform h2 {
+    font-size: 18px;
+    color: #575757;
+    text-transform: uppercase;
+}
+
+.contactform h2:after {
+    content: "";
+    height: 10px;
+    width: 321px;
+    display: block;
+    background-color: #26c7a9;
+}
+
+
+/* Styl do kontenera z flexem dla contactform */
+
+.contactform .containerFlex {
+    display: flex;
+    align-items: center;
+    justify-content: normal;
+}
 /* Style do części z inputami tekstiowymi */
 
 .contactform__text {
     display: flex;
     flex-direction: column;
-    margin-top: 97px;
+    margin-top: 62px;
 }
+
 
 .contactform__text input, .contactform__text textarea {
     width: 630px;
-    border-top: 1px solid #26c7a9;
-    border-right: 1px solid #26c7a9;
-    border-bottom: 1px solid #26c7a9;
-    border-left: none;
+    border: 1px solid #26c7a9;
     margin-bottom: 26px;
     font-size: 27px;
-    padding: 5px;
+    padding: 5px 10px;
     position: relative;
 }
 
@@ -435,4 +464,114 @@ h1 {
     position: absolute;
     top: 10px;
     font-weight: lighter;
+}
+
+/* Style do części z checkboxem */
+
+.contactform__checkbox {
+    height: 400px;
+    width: 345px;
+    margin-left: 55px;
+    margin-top: 7px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Wielkość czerwonego krzesła*/
+
+.contactform__checkbox img {
+    height: 200px;
+    width: 250px;
+}
+
+/* Style do checkboxa */
+
+.contactform__checkbox .checkbox {
+    display: flex;
+    position: relative;
+}
+
+.contactform__checkbox .checkbox input[type=checkbox] {
+    display:none;
+}
+
+.contactform__checkbox .checkbox input[type=checkbox] + label {
+    background: url("../images/form_off.jpg") no-repeat;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.contactform__checkbox .checkbox input[type=checkbox]:checked + label {
+    background: url("../images/form_ok.jpg") no-repeat;
+    height: 50px;
+    width: 50px;
+    display:inline-block;
+    padding: 0 0 0 0px;
+}
+
+.contactform__checkbox .checkbox label:last-child {
+    font-size: 20px;
+    color: #c2c2c2;
+    position: absolute;
+    left: 60px;
+    top: -3px;
+}
+
+/* Style do przycisku wyślij */
+
+.contactform__checkbox input[type="submit"] {
+    height: 72px;
+    width: 345px;
+    background-color: #26c7a9;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Style do footera */
+
+footer {
+    width: 100%;
+    height: 130px;
+}
+
+footer .containerFlex {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+/* Style do pierwszego tekstu */
+
+.footer__text {
+    color: #979797;
+    font-size: 15px;
+}
+
+.footer__icon {
+    width: 370px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer__icon a {
+    color: #989898;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.footer__icon a:last-child {
+    margin-right: 15px;
+}
+
+.footer__icon a span {
+    color: #999999;
+    font-weight: bold;
 }
