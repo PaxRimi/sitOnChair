@@ -38,24 +38,23 @@ header {
     align-items: center;
 }
 
+/* Główny styl dla linków na stronie ( głównie dla menu ) */
 .container a {
     color: #fff;
     text-decoration: none;
 }
 
-.toUpper {
+/* Style do logo strony  */
+
+.header__logo {
     text-transform: uppercase;
+}
+
+.header__logo span {
+    color: #26c7a9;
     font-weight: bold;
 }
-
-.container li > ul {
-    text-transform: none;
-}
-
-.blueText {
-    color: #23ba9c;
-    font-weight: 700;
-}
+/* style do głównej listy menu */
 
 nav > ul {
     display: flex;
@@ -63,14 +62,26 @@ nav > ul {
 }
 
 nav > ul li:not(:last-child) {
-    padding-right: 20px;
+    padding-right: 30px;
 }
 
-li.toUpper{
+nav > ul > li {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* style do rozwijanego menu */
+
+.header__nav--secondlist{
     position: relative;
 }
 
-.dropDown {
+.header__nav--secondlist:hover {
+    cursor: pointer;
+}
+
+/* Główne rozwijane ul*/
+.header__dropDown{
     width: 120px;
     position: absolute;
     padding-top: 25px;
@@ -79,21 +90,25 @@ li.toUpper{
     display: none;
 }
 
-.dropDown li {
+/* Elemeny rozwijanej listy*/
+.header__dropDown li {
     width: 120px;
     background-color: black;
     padding: 5px 10px;
     height: 40px;
     display: flex;
     align-items: center;
+    text-transform: none;
 }
 
-.dropDown li:first-child {
+/* Style potrzebne do strzałki na górze listy */
+
+.header__dropDown li:first-child {
     padding-top: 15px;
     position: relative;
 }
 
-.dropDown li:first-child:before {
+.header__dropDown li:first-child:before {
     content: "";
     display: block;
     width: 0;
@@ -106,16 +121,16 @@ li.toUpper{
     left: 35px;
 }
 
-.dropDown li:last-child {
+/* Wyśrodkowanie ostatniego elementu rozwijanej listy */
+
+.header__dropDown li:last-child {
     padding-bottom: 15px;
 }
 
-li.toUpper:hover .dropDown{
-    display: block;
-}
+/* Linijka odpowiedzialna za rozwijanie się listy */
 
-li.toUpper:hover {
-    cursor: pointer;
+.header__nav--secondlist:hover .header__dropDown{
+    display: block;
 }
 
 /* First Section with black chair */
@@ -127,35 +142,59 @@ main {
     background: linear-gradient(#f7f7f7, #cbcfd4 );
 }
 
-.container > span.blueText {
+/* Style do strzałek slidera */
+
+.main__arrow {
     font-size: 60px;
+    color: #26c7a9;
+    height: 450px;
+    display: flex;
+    align-items: center;
 }
 
-main img {
+.main__arrow:hover {
+    color: #229479;
+    cursor: pointer;
+}
+
+/* Wielskośc zjęcia krzesła */
+.main__img {
     width: 550px;
     height: 450px;
 }
 
-.mainContent {
+/* Styl do głównego tekstu pierwszej sekcji */
+.main__Content {
     width: 460px;
-    height: 330px;
+    height: 290px;
     padding-right: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
 }
 
+/* Style do nagłówka*/
 h1 {
     font-size: 30px;
+    text-transform: uppercase;
 }
 
-.mainContent p {
+h1 span {
+    color: #26c7a9;
+    font-weight: bold;
+}
+
+/* Style do tekstu pod nagłówkiem */
+
+.main__Content p {
     padding: 20px;
-
+    color: #808080;
 }
 
-.mainContent a {
+/* Style do przycisku*/
+
+.main__Content a {
     background-color: #23ba9c;
     border-radius: 10px;
     width: 265px;
@@ -163,36 +202,43 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 25px;
+    font-size: 22px;
+    text-transform: uppercase;
 }
 
-/* Second Section with two image and text  */
+/* Style do sekcji z galerią  */
 
 .gallery {
-    padding: 15px 0;
+    padding: 28px 0;
     height: 350px;
     width: 100%;
     margin-bottom: 50px;
 }
 
-.galleryImg:first-of-type {
+.gallery .containerFlex {
+    align-items: normal;
+}
+
+/* Zdjęcia do pierwszych dwóch boxów*/
+.gallery__Img:first-of-type {
     background-image: url("../images/box1_img.jpg");
 }
 
-.galleryImg:nth-of-type(2) {
+.gallery__Img:nth-of-type(2) {
     background-image: url("../images/box2_img.jpg");
 }
 
-.galleryImg{
-    width: calc(33% - 15px);
+/*Style do boxów ze zdjęciami i tekstem */
+.gallery__Img{
+    width: 330px;
     height: 226px;
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }
 
-.galleryText {
-    width: calc(33% - 15px);
-    height: 230px;
+.gallery__Text {
+    width: 330px;
+    height: 250px;
     border: 1px solid grey;
     padding: 15px;
     display: flex;
@@ -200,26 +246,37 @@ h1 {
     justify-content: space-around;
 }
 
-.galleryText h2 {
+/* Styl do teksów w ostatnim boxie */
+.gallery__Text h2 {
     font-weight: bold;
     position: relative;
 }
 
-.galleryText p {
+.gallery__Text p {
     color: #bdbdbd;
 }
 
-.galleryImg h2 {
+/* Style do textów w pierwszych 2 boxach */
+
+.gallery__Img h2 {
      font-weight: bold;
      margin-top: 150px;
      width: 100%;
      padding: 15px;
      height: 60px;
-     background: rgba(230, 225, 223, 0.3);
+     background: rgba(230, 225, 223, 0.5);
     position: relative;
  }
 
-.galleryImg h2:after {
+/* Style do powiększenia liter w zdjęciach */
+.gallery__Img h2 span {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+/* Style potrzebne do grafiki zielonego podkreslenia */
+
+.gallery__Img h2:after {
     content: "";
     width: 150px;
     height: 7px;
@@ -228,7 +285,7 @@ h1 {
     background-color: #26c7a9;
 }
 
-.galleryText h2:after {
+.gallery__Text h2:after {
     content: "";
     width: 150px;
     height: 7px;
@@ -236,7 +293,9 @@ h1 {
     position: absolute;
     background-color: #26c7a9;
 }
+
 /* Sekcja z Cennikami */
+
 .priceList {
     background-color: #f0f0f0;
     width: 100%;
