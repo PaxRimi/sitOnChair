@@ -634,3 +634,9 @@ footer .containerFlex {
     color: #999999;
     font-weight: bold;
 }
+
+/* Klasa hovająca element */
+
+.hidden {
+    display: none;
+}
