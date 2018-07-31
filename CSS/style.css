@@ -163,6 +163,19 @@ main {
     height: 450px;
 }
 
+.main__img ul {
+    list-style-type: none;
+    padding-top: 40px;
+}
+
+.main__img li {
+    display: none;
+}
+
+.main__img .visible {
+    display: block;
+}
+
 /* Styl do głównego tekstu pierwszej sekcji */
 .main__Content {
     width: 460px;
