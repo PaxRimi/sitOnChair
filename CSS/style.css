@@ -893,3 +893,7 @@ footer .containerFlex {
 .title {
     height: 30px;
 }
+
+.show {
+    display: block;
+}
