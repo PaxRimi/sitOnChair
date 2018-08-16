@@ -1,39 +1,39 @@
 // Add 2 img from html file
-var imgs = document.querySelectorAll('.gallery__Img');
+const imgs = document.querySelectorAll('.gallery__Img');
 
 // Add prev and next button
-var prev = document.getElementById('prev');
-var next = document.getElementById('next');
+const prev = document.getElementById('prev');
+const next = document.getElementById('next');
 
 // Add slider img list
-var sliderImgs = document.querySelectorAll('.main__img li');
+const sliderImgs = document.querySelectorAll('.main__img li');
 // Add list of arrows from drop down list
-var arrowList = document.querySelectorAll('.list_arrow');
+const arrowList = document.querySelectorAll('.list_arrow');
 // Add list of element to choose
 // type
-var typeElements = document.querySelectorAll('.list_panel-title li');
+const typeElements = document.querySelectorAll('.list_panel-title li');
 //color
-var elementColors = document.querySelectorAll('.list_panel-color li');
+const elementColors = document.querySelectorAll('.list_panel-color li');
 //pattern
-var elementPatterns = document.querySelectorAll('.list_panel-pattern li');
+const elementPatterns = document.querySelectorAll('.list_panel-pattern li');
 //transport
-var checkBoxTransport = document.getElementById('transport');
+const checkBoxTransport = document.getElementById('transport');
 //Add table elements to count the price
-var title = document.getElementById('title');
-var color = document.getElementById('color');
-var pattern = document.getElementById('pattern');
-var transport = document.getElementById('checkTransport');
-var titleValue = document.getElementById('titleValue');
-var colorValue = document.getElementById('colorValue');
-var patternValue = document.getElementById('patternValue');
-var transportValue = document.getElementById('transportValue');
+const title = document.getElementById('title');
+const color = document.getElementById('color');
+const pattern = document.getElementById('pattern');
+const transport = document.getElementById('checkTransport');
+const titleValue = document.getElementById('titleValue');
+const colorValue = document.getElementById('colorValue');
+const patternValue = document.getElementById('patternValue');
+const transportValue = document.getElementById('transportValue');
 // Add elements that sum the price
-var sum = document.getElementById('sum');
+const sum = document.getElementById('sum');
 console.log(sum);
 
 
 //number of showing ul element
-var number = 0;
+let number = 0;
 
 // At the start show firs element
 sliderImgs[number].classList.add('visible');
